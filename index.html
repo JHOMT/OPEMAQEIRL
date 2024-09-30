@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Empresa de alquiler y servicios de construcción con maquinaria pesada.">
+  <meta name="keywords" content="maquinaria pesada, operadores, alquiler, retroexcavadora, volquete, minería, construcción, chiclayo">
+  <meta name="author" content="OPEMAQ">
+  <title>OPEMAQ | Inicio</title>
+
+  <!-- Fuentes y Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="icon" href="img/logo-opemaq.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" style="background-color: #201f1f !important; transition: all 0.4s ease;">
+  <div class="container">
+    <a class="navbar-brand animate__animated animate__fadeInDown" href="index.html">
+      <img src="img/logo-opemaq.png" alt="Logo OPEMAQ" style="max-width: 120px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="equipos.html">Equipos</a>
+        </li>
+      </ul>
+      <form class="d-flex ms-lg-3" id="searchForm" action="equipos.html" method="GET">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Buscar maquinaria..." aria-label="Buscar" aria-describedby="button-addon2" id="searchInput" name="q">
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero text-center d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <h1 class="display-4 fw-bold text-white">¡Eleva tu proyecto con OPEMAQ!</h1>
+        <p class="lead text-white">Lideramos en alquiler de maquinaria pesada y servicios de demolición en la región. ¡Con nosotros, tu éxito está garantizado!</p>
+        <a href="servicios.html" class="btn btn-warning btn-lg mt-3">Descubre nuestros servicios</a>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Nosotros Section -->
+<section id="nosotros" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 animate__animated animate__fadeInUp">Sobre <strong>OPEMAQ</strong></h2>
+    <p class="lead text-center animate__animated animate__fadeInUp mb-5">Con más de una década en el mercado, <strong>OPEMAQ Construye EIRL</strong> se ha consolidado como el socio estratégico de las más grandes obras de construcción. Nos especializamos en el alquiler de maquinaria pesada y servicios personalizados para asegurar el éxito de cada proyecto.</p>
+
+    <div class="row">
+      <!-- Card Misión -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg animate__animated animate__fadeInLeft bg-light p-2">
+          <div class="card-body text-center">
+            <div class="icon-wrapper bg-warning text-white rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-bullseye fa-2x"></i>
+            </div>
+            <h3 class="card-title">Nuestra Misión</h3>
+            <p class="card-text">Ser el mejor aliado de nuestros clientes, proporcionando soluciones confiables en maquinaria pesada y garantizando la excelencia en cada servicio.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Visión -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg animate__animated animate__fadeInRight bg-light p-2">
+          <div class="card-body text-center">
+            <div class="icon-wrapper bg-warning text-white rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-chart-line fa-2x"></i>
+            </div>
+            <h3 class="card-title">Nuestra Visión</h3>
+            <p class="card-text">Convertirnos en la empresa líder en alquiler de maquinaria y servicios en el sector de construcción y minería, siendo reconocidos por nuestra innovación y compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="servicios.html" class="btn btn-service btn-lg animate__animated animate__fadeInUp">Conoce nuestros servicios   -></a>
+    </div>
+  </div>
+</section>
+
+<!-- Link whatsapp -->
+<a href="https://wa.me/51979139619" target="_blank" class="btn-whatsapp">
+  <img src="img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+</a>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <!-- Información de la empresa -->
+      <div class="col-md-4 text-center text-md-start mb-4">
+        <h5 class="fw-bold">OPEMAQ Construye EIRL</h5>
+        <p>Nos especializamos en el alquiler de maquinaria pesada y servicios de construcción con más de 10 años de experiencia en el sector.</p>
+        <p class="copy">© 2024 OPEMAQ Construye EIRL | by <a href="https://jhomt.github.io/portafolio_jhomt/" target="_blank" class="text-white">JHOMT</a></p>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="col-md-4 text-center text-md-start mb-4">
+        <h5 class="fw-bold">Contáctanos</h5>
+        <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+        <p><i class="fas fa-phone"></i> +51 979 101 826</p>
+        <p><i class="fas fa-envelope"></i> opemaqconstruyeperu@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Chiclayo, Perú</p>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-md-4 text-center text-md-start">
+        <h5 class="fw-bold">Síguenos</h5>
+        <a href="https://wa.me/51979139619" target="_blank" class="text-white me-3 animate__animated animate__fadeInUp">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100064269750589" target="_blank" class="text-white me-3 animate__animated animate__fadeInUp">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/opemaq-peru-peru-924b9a163/" target="_blank" class="text-white animate__animated animate__fadeInUp">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+</body>
+</html>

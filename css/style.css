@@ -1,0 +1,240 @@
+:root {
+    --primary-color-dark: #003366;
+    --accent-color-yellow: #FFD700;
+    --base-color-black: #000000;
+    --neutral-color-dark: #201f1f;
+    --neutral-color-light: #eaf1fc;
+    --base-color-white: #FFFFFF;
+    --cta-color: #0946a6;
+}
+
+/* Estilos globales */
+body {
+    background-color: var(--neutral-color-light);
+    color: var(--base-color-black);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color-dark);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--neutral-color-dark);
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    box-shadow: 0 9px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-color-dark);
+}
+
+.navbar .navbar-brand img {
+    min-width: 170px;
+    height: auto;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.nav-item .active {
+    color: var(--accent-color-yellow) !important;
+    border-bottom: var(--accent-color-yellow) 1px solid;
+}
+
+.nav-item a {
+    color: var(--base-color-white);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+    color: var(--accent-color-yellow) !important;
+}
+
+/* Hero Section */
+#hero {
+    background: url("../img/fondo.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    height: 100vh;
+}
+
+#hero h1, #hero p {
+    color: var(--base-color-white);
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas generales (equipos y servicios) */
+.card-equipo, .service-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-equipo:hover, .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+    background-color: var(--accent-color-yellow);
+    color: var(--base-color-black);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+}
+
+.img-service, .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-service:hover, .card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.card-img-container {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones */
+.btn-warning {
+    background-color: var(--accent-color-yellow);
+    color: var(--base-color-black);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: var(--cta-color);
+    border: 1px solid var(--cta-color);
+    color: var(--base-color-white);
+}
+
+.btn-service {
+    background-color: var(--neutral-color-dark);
+    color: var(--neutral-color-light);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-service:hover {
+    background-color: var(--accent-color-yellow);
+    color: var(--base-color-black);
+}
+
+/* Footer */
+footer {
+    background-color: var(--base-color-black);
+    color: var(--base-color-white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--neutral-color-light);
+    font-size: 1rem;
+
+}
+
+footer a {
+    color: var(--base-color-white);
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+.copy{
+    font-size: 0.9rem;
+    a{
+        color: var(--accent-color-yellow) !important;
+        font-size: .9rem;
+        margin-left: 0;
+    }
+}
+
+footer a:hover {
+    color: var(--accent-color-yellow);
+    transition: color 0.3s ease;
+}
+
+/* Animación para tarjetas */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+}
+
+.card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    .service-content {
+        margin-top: 20px;
+    }
+}
