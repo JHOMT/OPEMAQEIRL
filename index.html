@@ -22,13 +22,16 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" style="background-color: #201f1f !important; transition: all 0.4s ease;">
   <div class="container">
+    <!-- Logo Responsivo -->
     <a class="navbar-brand animate__animated animate__fadeInDown" href="index.html">
-      <img src="img/logo-opemaq.png" alt="Logo OPEMAQ" style="max-width: 120px;">
+      <img src="img/logo-opemaq.png" alt="Logo OPEMAQ" class="img-fluid" style="max-width: 120px;">
     </a>
+    <!-- Botón de menú en pantallas pequeñas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="navbarNav">
+      <!-- Links de navegación -->
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link active" href="index.html">Nosotros</a>
@@ -40,6 +43,7 @@
           <a class="nav-link" href="equipos.html">Equipos</a>
         </li>
       </ul>
+      <!-- Formulario de búsqueda -->
       <form class="d-flex ms-lg-3" id="searchForm" action="equipos.html" method="GET">
         <div class="input-group">
           <input type="search" class="form-control" placeholder="Buscar maquinaria..." aria-label="Buscar" aria-describedby="button-addon2" id="searchInput" name="q">

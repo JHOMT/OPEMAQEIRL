@@ -56,10 +56,12 @@ li {
     background-color: var(--primary-color-dark);
 }
 
-.navbar .navbar-brand img {
-    min-width: 170px;
-    height: auto;
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 50px;
+    }
 }
+
 
 .navbar-nav {
     width: 100%;
