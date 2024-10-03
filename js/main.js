@@ -73,30 +73,24 @@ function renderMaquinas(filtro = '') {
         const whatsappUrl = `https://wa.me/51979139619?text=${encodeURIComponent(mensaje)}`;
 
         const maquinaHTML = `
-      <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
-        <div class="card h-100 shadow-lg d-flex flex-column appear"> <!-- Se agrega la clase "appear" para aplicar la transición -->
-          <div class="card-img-container">
-            <img src="${maquina.imagen}" class="card-img-top" alt="${maquina.nombre}">
-          </div>
-          <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-between">
-            <div>
-              <h5 class="card-title">${maquina.nombre}</h5>
-              <p class="card-text">${maquina.descripcion}</p>
+        <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+          <div class="card h-100 shadow-lg d-flex flex-column appear">
+            <div class="card-img-container">
+              <img src="${maquina.imagen}" class="card-img-top" alt="${maquina.nombre}">
             </div>
-            <div>
-              <a href="${whatsappUrl}" target="_blank" class="btn btn-service mt-3 mb-3">Alquilar  -></a>
+            <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">${maquina.nombre}</h5>
+                <p class="card-text">${maquina.descripcion}</p>
+              </div>
+              <div>
+                <a href="${whatsappUrl}" target="_blank" class="btn btn-service mt-3 mb-3">Alquilar  <i class="bi bi-chevron-double-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    `;
+      `;
         container.innerHTML += maquinaHTML;
-
-        setTimeout(() => {
-            document.querySelectorAll('.card').forEach(card => {
-                card.classList.add('appear');
-            });
-        }, 10000);
     });
 }
 
@@ -113,4 +107,78 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const searchTerm = document.getElementById('searchInput').value;
     renderMaquinas(searchTerm);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('nav-primary');
+    const sticky = navbar.offsetTop;
+    const sections = document.querySelectorAll('section');
+    const navLi = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    window.addEventListener('scroll', function() {
+        // Sticky Navbar
+        if (window.pageYOffset > sticky) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.getAttribute("href").includes(current)) {
+                li.classList.add("active");
+            }
+        });
+    });
+
+    navLi.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const targetId = link.getAttribute('href');
+            if (targetId.startsWith("#")) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - navbar.clientHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            if (window.innerWidth < 992) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+
+    navbarToggler.addEventListener('click', function() {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!navbar.contains(e.target) && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        }
+    });
 });

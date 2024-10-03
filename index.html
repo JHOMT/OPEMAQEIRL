@@ -7,10 +7,9 @@
   <meta name="keywords" content="maquinaria pesada, operadores, alquiler, retroexcavadora, volquete, minería, construcción, chiclayo">
   <meta name="author" content="OPEMAQ">
   <title>OPEMAQ | Inicio</title>
-
-  <!-- Fuentes y Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="node_modules/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
+  <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="icon" href="img/logo-opemaq.png" type="image/png">
@@ -19,96 +18,353 @@
 </head>
 <body>
 
+<!-- Hero Section -->
+<section id="hero" class="carousel slide p-0" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#hero" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#hero" data-bs-slide-to="1"></li>
+    <li data-bs-target="#hero" data-bs-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/imagen1.jpg" class="d-block w-100" alt="Maquinaria pesada en acción">
+      <div class="carousel-caption d-none d-md-block caption-bg">
+        <h1 class="display-4 fw-bold text-uppercase text-shadow">¡Potencia y eficiencia para tus proyectos!</h1>
+        <p class="lead text-shadow">Confía en nosotros para el alquiler de maquinaria pesada y asegura el éxito de tu obra.</p>
+        <a href="#services" class="btn btn-warning btn-lg px-5 py-3 mt-3 custom-btn">Descubre nuestros servicios</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/imagen2.webp" class="d-block w-100" alt="Obras de construcción">
+      <div class="carousel-caption d-none d-md-block caption-bg">
+        <h1 class="display-4 fw-bold text-uppercase text-shadow">Soluciones integrales para tu proyecto</h1>
+        <p class="lead text-shadow">Equipos modernos y personal capacitado, ¡garantizamos resultados!</p>
+        <a href="#contacto" class="btn btn-warning btn-lg px-5 py-3 mt-3 custom-btn">Contáctanos hoy</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/imagen3.jpg" class="d-block w-100" alt="Equipo de operadores">
+      <div class="carousel-caption d-none d-md-block caption-bg">
+        <h1 class="display-4 fw-bold text-uppercase text-shadow">Más de 10 años de experiencia en el sector</h1>
+        <p class="lead text-shadow">Tu aliado estratégico en construcción y minería.</p>
+        <a href="#maquinaria" class="btn btn-warning btn-lg px-5 py-3 mt-3 custom-btn">Explora nuestra maquinaria</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon custom-control" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon custom-control" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </a>
+</section>
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" style="background-color: #201f1f !important; transition: all 0.4s ease;">
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav-primary">
   <div class="container">
     <!-- Logo Responsivo -->
-    <a class="navbar-brand animate__animated animate__fadeInDown" href="index.html">
-      <img src="img/logo-opemaq.png" alt="Logo OPEMAQ" class="img-fluid" style="max-width: 120px;">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-opemaq.png" alt="Logo OPEMAQ" class="img-fluid" style="max-width: 170px;">
     </a>
     <!-- Botón de menú en pantallas pequeñas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Links de navegación -->
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Nosotros</a>
+          <a class="nav-link active" href="#nosotros" data-bs-toggle="collapse" data-bs-target="#navbarNav">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
+          <a class="nav-link" href="#por-que-nosotros" data-bs-toggle="collapse" data-bs-target="#navbarNav">¿Por qué nosotros?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="equipos.html">Equipos</a>
+          <a class="nav-link" href="#services" data-bs-toggle="collapse" data-bs-target="#navbarNav">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#maquinaria" data-bs-toggle="collapse" data-bs-target="#navbarNav">Nuestra Flota</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#marcas" data-bs-toggle="collapse" data-bs-target="#navbarNav">Marcas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto" data-bs-toggle="collapse" data-bs-target="#navbarNav">Contáctanos</a>
         </li>
       </ul>
-      <!-- Formulario de búsqueda -->
-      <form class="d-flex ms-lg-3" id="searchForm" action="equipos.html" method="GET">
-        <div class="input-group">
-          <input type="search" class="form-control" placeholder="Buscar maquinaria..." aria-label="Buscar" aria-describedby="button-addon2" id="searchInput" name="q">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </form>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section id="hero" class="hero text-center d-flex justify-content-center align-items-center">
+<!-- Nosotros -->
+<section id="nosotros" class="mt-0 pt-0" >
+  <div class="title-container">
+    <p class="text-center subtitle">OPEMAQ Construye EIRL</p>
+    <h2 class="text-center title">¿Quiénes somos?</h2>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Descripción de la empresa -->
+      <div class="col-md-6 mb-4">
+        <div class="bg-white p-4 shadow-lg rounded">
+          <p class="lead">
+            Con más de 10 años en el mercado, <strong>OPEMAQ Construye EIRL</strong> se destaca en el alquiler de maquinaria pesada y servicios especializados para la construcción. Nos comprometemos a ofrecer soluciones eficientes y personalizadas para asegurar el éxito de cada proyecto.
+          </p>
+          <p class="lead">
+            Hemos trabajado con las principales constructoras de Lambayeque, brindando equipos de última tecnología y personal altamente capacitado, cumpliendo con los más altos estándares de calidad y plazos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjetas de Misión y Visión -->
+      <div class="col-md-6 mb-4">
+        <div class="row">
+          <!-- Tarjeta de Misión -->
+          <div class="col-lg-12 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-lg p-4 w-100 h-100 text-center animate__animated animate__fadeInLeft">
+              <div class="card-body">
+                <h3 class="card-title mb-3">Nuestra Misión</h3>
+                <p class="card-text">
+                  Ser el aliado estratégico de nuestros clientes, ofreciendo maquinaria y servicios que garantizan resultados sobresalientes en cada proyecto.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Visión -->
+          <div class="col-lg-12 d-flex align-items-stretch">
+            <div class="card shadow-lg p-4 w-100 h-100 text-center animate__animated animate__fadeInRight">
+              <div class="card-body">
+                <h3 class="card-title mb-3">Nuestra Visión</h3>
+                <p class="card-text">
+                  Convertirnos en líderes en alquiler de maquinaria, destacándonos por nuestra innovación y compromiso con la satisfacción del cliente y la sostenibilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ¿Por qué nosotros? -->
+<section id="por-que-nosotros" class="py-5">
+  <div class="title-container">
+    <p class="subtitle">OPEMAQ Construye EIRL</p>
+    <h2 class="title">¿Por qué elegirnos?</h2>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 animate__animated animate__fadeInLeft">
-        <h1 class="display-4 fw-bold text-white">¡Eleva tu proyecto con OPEMAQ!</h1>
-        <p class="lead text-white">Lideramos en alquiler de maquinaria pesada y servicios de demolición en la región. ¡Con nosotros, tu éxito está garantizado!</p>
-        <a href="servicios.html" class="btn btn-warning btn-lg mt-3">Descubre nuestros servicios</a>
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="p-5 text-center shadow-lg block-experience position-relative animate__animated animate__fadeInLeft">
+          <div class="icon-circle bg-warning mb-4">
+            <i class="fas fa-trophy fa-3x text-white"></i>
+          </div>
+          <h4 class="block-title">Experiencia Comprobada</h4>
+          <p class="block-text">Más de 10 años brindando soluciones confiables en el sector de la construcción y minería.</p>
+        </div>
       </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="p-5 text-center shadow-lg block-quality position-relative animate__animated animate__fadeInUp">
+          <div class="icon-circle bg-success mb-4">
+            <i class="fas fa-check-circle fa-3x text-white"></i>
+          </div>
+          <h4 class="block-title">Calidad Garantizada</h4>
+          <p class="block-text">Equipos de última tecnología y personal capacitado para cada proyecto.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="p-5 text-center shadow-lg block-safety position-relative animate__animated animate__fadeInRight">
+          <div class="icon-circle bg-primary mb-4">
+            <i class="fas fa-shield-alt fa-3x text-white"></i>
+          </div>
+          <h4 class="block-title">Seguridad Primero</h4>
+          <p class="block-text">Operaciones seguras y responsables bajo los más altos estándares de seguridad.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="p-5 text-center shadow-lg block-commitment position-relative animate__animated animate__fadeInLeft">
+          <div class="icon-circle bg-info mb-4">
+            <i class="fas fa-handshake fa-3x text-white"></i>
+          </div>
+          <h4 class="block-title">Compromiso con el Cliente</h4>
+          <p class="block-text">Aseguramos la satisfacción de nuestros clientes, superando sus expectativas.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-8 col-md-12 mb-4">
+        <div class="p-5 text-center shadow-lg block-innovation position-relative animate__animated animate__fadeInUp">
+          <div class="icon-circle bg-danger mb-4">
+            <i class="fas fa-lightbulb fa-3x text-white"></i>
+          </div>
+          <h4 class="block-title">Innovación Continua</h4>
+          <p class="block-text">Adoptamos nuevas tecnologías para ofrecer las mejores soluciones del mercado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="services">
+  <div class="title-container">
+    <p class="text-center subtitle">OPEMAQ Construye EIRL</p>
+    <h2 class="text-center title mb-5">Nuestros Servicios</h2>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <p class="lead">En <strong>OPEMAQ</strong>, ofrecemos una gama completa de servicios para transformar tu obra. Desde alquiler de maquinaria hasta excavaciones, garantizamos un servicio de primer nivel.</p>
+      </div>
+    </div>
+
+    <!-- Nueva disposición con texto claro y tamaños uniformes -->
+    <div class="row">
+      <!-- Servicio 1: Demolición Experta -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInLeft">
+          <div class="service-img-container">
+            <img class="service-img" src="img/demolicion.webp" alt="Demolición Experta">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Demolición Experta</h4>
+            <p>Realizamos demolición segura y eficiente, cumpliendo con los más altos estándares de seguridad.</p>
+            <a  href="https://wa.me/51979139619?text=Hola%2C%20me%20gustaria%20informacion%20para%20una%20DEMOLICION" target="_blank" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 2: Eliminación de Desmonte -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInUp">
+          <div class="service-img-container">
+            <img class="service-img" src="img/eliminacion.jpg" alt="Eliminación de Desmonte">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Eliminación de Desmonte</h4>
+            <p>Nos encargamos de la limpieza y disposición de desmonte, garantizando que tu obra continúe sin interrupciones.</p>
+            <a href="https://wa.me/51979139619?text=Hola%2C%20me%20gustaria%20informacion%20para%20ELIMINACION%20DE%20DESMONTE" target="_blank" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 3: Alquiler de Maquinaria -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInUp">
+          <div class="service-img-container">
+            <img class="service-img" src="img/alquiler.jpg" alt="Alquiler de Maquinaria">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Alquiler de Maquinaria</h4>
+            <p>Disponemos de una flota moderna de maquinaria pesada, lista para cualquier desafío que enfrente tu proyecto.</p>
+            <a href="#maquinaria" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 4: Excavaciones -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInLeft">
+          <div class="service-img-container">
+            <img class="service-img" src="img/excavacion.jpg" alt="Excavaciones">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Excavaciones</h4>
+            <p>Ofrecemos excavaciones precisas y de calidad con maquinaria especializada.</p>
+            <a href="https://wa.me/51979139619?text=Hola%2C%20me%20gustaria%20informacion%20para%20EXCAVACION" target="_blank" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 5: Movimientos de Tierra -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInUp">
+          <div class="service-img-container">
+            <img class="service-img" src="img/movimiento.JPG" alt="Movimientos de Tierra">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Movimientos de Tierra</h4>
+            <p>Movimientos de tierra eficaces y controlados, asegurando el progreso rápido de tu obra.</p>
+            <a href="https://wa.me/51979139619?text=Hola%2C%20me%20gustaria%20informacion%20para%20MOVIMIENTO%20DE%20TIERRA" target="_blank" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 6: Transporte de Materiales -->
+      <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="service-card shadow-lg d-flex flex-column overflow-hidden animate__animated animate__fadeInRight">
+          <div class="service-img-container">
+            <img class="service-img" src="img/transporte.jpg" alt="Transporte de Materiales">
+          </div>
+          <div class="service-content p-4 d-flex flex-column justify-content-between">
+            <h4>Transporte de Materiales</h4>
+            <p>Contamos con una flota de volquetes para el transporte seguro y eficiente de materiales a cualquier sitio de construcción.</p>
+            <a href="https://wa.me/51979139619?text=Hola%2C%20me%20gustaria%20informacion%20para%20TRASLADO%20DE%20MATERIAL" target="_blank" class="btn btn-service mt-3">Información <i class="bi bi-chevron-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipos -->
+<section id="maquinaria">
+  <div class="title-container">
+    <p class="text-center subtitle">OPEMAQ Construye EIRL</p>
+    <h2 class="text-center title">NUestra Flota</h2>
+  </div>
+  <div class="container">
+    <div class="row">
       <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <form class="d-flex ms-lg-3" id="searchForm">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Buscar maquinaria..." aria-label="Buscar" aria-describedby="button-addon2" id="searchInput" name="q">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row g-4 mt-4" id="equiposContainer">
+      <!-- Los equipos se cargarán dinámicamente con JavaScript -->
     </div>
   </div>
 </section>
 
-<!-- Nosotros Section -->
-<section id="nosotros" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5 animate__animated animate__fadeInUp">Sobre <strong>OPEMAQ</strong></h2>
-    <p class="lead text-center animate__animated animate__fadeInUp mb-5">Con más de una década en el mercado, <strong>OPEMAQ Construye EIRL</strong> se ha consolidado como el socio estratégico de las más grandes obras de construcción. Nos especializamos en el alquiler de maquinaria pesada y servicios personalizados para asegurar el éxito de cada proyecto.</p>
-
+<!-- Marcas -->
+<section id="marcas">
+  <div class="title-container">
+    <p class="text-center subtitle">OPEMAQ Construye EIRL</p>
+    <h2 class="text-center title">Nuestras Marcas</h2>
+  </div>
+  <div class="container mb-4">
     <div class="row">
-      <!-- Card Misión -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-lg animate__animated animate__fadeInLeft bg-light p-2">
-          <div class="card-body text-center">
-            <div class="icon-wrapper bg-warning text-white rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-bullseye fa-2x"></i>
-            </div>
-            <h3 class="card-title">Nuestra Misión</h3>
-            <p class="card-text">Ser el mejor aliado de nuestros clientes, proporcionando soluciones confiables en maquinaria pesada y garantizando la excelencia en cada servicio.</p>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4 logo-marca">
+            <img src="img/logo-cat.png" alt="Logo Caterpillar" class="img-fluid" style="max-width: 200px;">
+          </div>
+          <div class="col-md-8">
+            <h4 class="card-title">Caterpillar</h4>
+            <p class="card-text">La marca número uno en maquinaria pesada, ofreciendo equipos robustos y confiables para los proyectos más exigentes. Caterpillar es nuestra marca recomendada por su durabilidad y rendimiento superior.</p>
           </div>
         </div>
       </div>
-
-      <!-- Card Visión -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-lg animate__animated animate__fadeInRight bg-light p-2">
-          <div class="card-body text-center">
-            <div class="icon-wrapper bg-warning text-white rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-chart-line fa-2x"></i>
-            </div>
-            <h3 class="card-title">Nuestra Visión</h3>
-            <p class="card-text">Convertirnos en la empresa líder en alquiler de maquinaria y servicios en el sector de construcción y minería, siendo reconocidos por nuestra innovación y compromiso.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-5">
-      <a href="servicios.html" class="btn btn-service btn-lg animate__animated animate__fadeInUp">Conoce nuestros servicios   -></a>
     </div>
   </div>
 </section>
+
 
 <!-- Link whatsapp -->
 <a href="https://wa.me/51979139619" target="_blank" class="btn-whatsapp">
@@ -123,13 +379,14 @@
       <div class="col-md-4 text-center text-md-start mb-4">
         <h5 class="fw-bold">OPEMAQ Construye EIRL</h5>
         <p>Nos especializamos en el alquiler de maquinaria pesada y servicios de construcción con más de 10 años de experiencia en el sector.</p>
-        <p class="copy">© 2024 OPEMAQ Construye EIRL | by <a href="https://jhomt.github.io/portafolio_jhomt/" target="_blank" class="text-white">JHOMT</a></p>
+        <p><i class="fas fa-code"></i> Desarrollado por <a href="https://jhomt.github.io/portafolio_jhomt/" target="_blank" class="color-primary fw-normal">JHOMT</a></p>
+        <p class="copy">© 2024 OPEMAQ Construye EIRL</p>
       </div>
 
       <!-- Información de contacto -->
-      <div class="col-md-4 text-center text-md-start mb-4">
+      <div class="col-md-4 text-center text-md-start mb-4" id="contacto">
         <h5 class="fw-bold">Contáctanos</h5>
-        <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+        <p><i class="fas fa-phone"></i> +51 979 139 619</p>
         <p><i class="fas fa-phone"></i> +51 979 101 826</p>
         <p><i class="fas fa-envelope"></i> opemaqconstruyeperu@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Chiclayo, Perú</p>
@@ -155,5 +412,7 @@
 <!-- Scripts -->
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
